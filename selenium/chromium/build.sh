@@ -6,4 +6,4 @@ if [[ -z "$1" ]]; then
     exit 2
 fi
 
-docker build -t selenoid/chromium:${VERSION} .
+docker build -t selenoid/chromium:${VERSION} --build-arg VERSION=$VERSION .
