@@ -29,6 +29,7 @@ RUN \
 ENV DBUS_SESSION_BUS_ADDRESS=/dev/null
 COPY --from=go /devtools/devtools /usr/bin/
 COPY entrypoint.sh /
+RUN chown selenium /entrypoint.sh && chmod +x /entrypoint.sh
 
 USER selenium
 
